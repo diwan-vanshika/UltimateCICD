@@ -1,25 +1,93 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
-    <link data-th-href="@{/css/main.css?{id}(id=${timestamp})}" rel="stylesheet">
-    <title>CI/CD Master Class By Abhishek Veeramalla</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title th:text="${title}">Vanshika's Portfolio</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Vanshika's Portfolio</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="#">Ultimate CI/CD Pipeline using Java</div></a>
-</nav>
+    <!-- Header Section -->
+    <header class="jumbotron text-center bg-primary text-white mb-4">
+        <h1 class="display-4">Welcome to My Portfolio</h1>
+        <p class="lead" th:text="${msg}">I have successfully built a Spring Boot application using Maven and deployed it to Kubernetes using Argo CD.</p>
+        <a href="#contact" class="btn btn-light btn-lg mt-3">Get in Touch</a>
+    </header>
 
-<main role="main" class="container">
-    <div class="starter-template">
-        <h1 th:text="${title}">Default title.</h1>
-        <p th:text="${msg}">Default text.</p>
-    </div>
-</main>
+    <!-- About Me Section -->
+    <section id="about" class="container mb-5">
+        <h2 class="text-center mb-4">About Me</h2>
+        <p class="text-center">Experienced in web development, cloud services, and DevOps practices. Passionate about contributing to innovative projects and eager to tackle new challenges.</p>
+        <p class="text-center">Committed to continuous learning and growth in software engineering.</p>
+    </section>
 
-<script data-th-src="@{/js/main.js}"></script>
+    <!-- Skills Section -->
+    <section id="skills" class="container mb-5">
+        <h2 class="text-center mb-4">Technical Skills</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Languages</h4>
+                <ul>
+                    <li>Java</li>
+                    <li>C, C++, Python, JavaScript (Basic Knowledge)</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h4>Cloud & DevOps</h4>
+                <ul>
+                    <li>AWS: Certified AWS Academy Graduate</li>
+                    <li>Docker, Maven, Jenkins, Sonarqube, Selenium, TestNg</li>
+                    <li>MySQL, MongoDB</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="container mb-5">
+        <h2 class="text-center mb-4">Projects</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Ultimate_CICD</h4>
+                <p>Designed and developed a Spring Boot application involving DevOps tools like Maven, Jenkins, Sonarqube, Docker, Kubernetes.</p>
+                <a href="https://github.com/diwan-vanshika/Ultimate_CICD.git" target="_blank" class="btn btn-dark">View on GitHub</a>
+            </div>
+            <div class="col-md-6">
+                <h4>Sorting Visualizer</h4>
+                <p>Developed a dynamic and interactive visualization tool to demystify algorithms using JavaScript, HTML, and CSS.</p>
+                <a href="https://github.com/diwan-vanshika/Sorting-Visualiser.git" target="_blank" class="btn btn-dark">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container text-center mb-5">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:vanshikadiwan2304@gmail.com">vanshikadiwan2304@gmail.com</a></p>
+        <p>Phone: 08168292150</p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/vanshikadiwan" target="_blank">linkedin.com/in/vanshikadiwan</a></p>
+    </section>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-
 </html>
